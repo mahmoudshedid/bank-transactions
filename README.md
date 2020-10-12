@@ -24,39 +24,39 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## Application Structure
 
-src--
+src--__
+    |__
+    |__
+    common--__
+    |      |__
+    |      error  `Handle errors`.__
+    |__
+    |__
+    filtering `Filter for 'Recent Transactions'`.__
+    |__
+    |__
+    header `Page Header`.__
+    |__
+    |__
+    modal-box-message `Popup window alert message`.__
+    |__
+    |__
+    models `For all object and serialization`.__
+    |__
     |
+    pips--__
+    |     |__
+    |     currency-code.pipe.js `This pip for chose currency code for 'Recent Transactions'`.__
+    |__
+    |__
+    |__
+    recent-transactions `Has Filter and Recent Transactions components`.__
+    |__
     |
-    common--
-    |      |
-    |      error  `Handle errors`.
-    |
-    |
-    filtering `Filter for 'Recent Transactions'`.
-    |
-    |
-    header `Page Header`.
-    |
-    |
-    modal-box-message `Popup window alert message`.
-    |
-    |
-    models `For all object and serialization`.
-    |
-    |
-    pips--
-    |     |
-    |     currency-code.pipe.js `This pip for chose currency code for 'Recent Transactions'`.
-    |
-    |
-    |
-    recent-transactions `Has Filter and Recent Transactions components`.
-    |
-    |
-    services `Has all application services`.
-    |
-    |
-    transactions-list `List all 'Recent Transactions' and get new transfer from 'Make a transfer'`
-    |
-    |
-    transfer `'Make a transfer' component to make new transfer and send to 'Recent Transactions'`.
+    services `Has all application services`.__
+    |__
+    |__
+    transactions-list `List all 'Recent Transactions' and get new transfer from 'Make a transfer'`.__
+    |__
+    |__
+    transfer `'Make a transfer' component to make new transfer and send to 'Recent Transactions'`.__
