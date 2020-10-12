@@ -1,0 +1,190 @@
+@import '../../styles/styles.scss';
+
+.transactions-list {
+
+  div {
+    vertical-align: middle;
+  }
+
+  .list-row {
+    border: 2px solid $borderColor;
+    border-left: none;
+    border-bottom: none;
+    display: table;
+    width: 100%;
+    line-height: 0.8;
+    height: 67px;
+  }
+
+  .list-row:last-child {
+    border-bottom: 2px solid $borderColor;
+  }
+
+  .column {
+    display: table-cell;
+  }
+
+  .category {
+    background-color: rgb(160, 12, 12);
+    width: 10px;
+    position: absolute;
+    height: 67px;
+  }
+
+  .transactions-date {
+    padding-left: 1.5em;
+    width: 5.5em;
+  }
+
+  .beneficiary-image {
+    width: 5.4em;
+
+    img {
+      margin: 3px;
+      width: 50px;
+      height: 50px;
+      filter: grayscale(1);
+    }
+  }
+
+  .beneficiary-details {
+    width: 25em;
+
+    span {
+      width: 25em;
+      display: block;
+      white-space: nowrap;
+      overflow: hidden !important;
+      text-overflow: ellipsis;
+    }
+
+    .beneficiary-name {
+      line-height: 1.2;
+      font-size: 18px;
+    }
+
+    .transactions-type {
+      line-height: 1;
+      font-size: 15px;
+    }
+  }
+
+  .transactions-amount {
+    text-align: right;
+    width: 7em;
+    float: right;
+    line-height: 67px;
+    margin-right: 2.5em;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+  }
+
+  @include media("screen", ">bp1Width", "<maxWidth") {
+
+    min-width: 609px;
+
+    .beneficiary-details {
+      width: 17em;
+
+      .beneficiary-name,
+      .transactions-type {
+        width: 17em;
+      }
+    }
+
+    .transactions-amount {
+      margin-right: 0.8em;
+    }
+  }
+
+  @include media("screen", ">minWidth", "<bp1Width") {
+
+    .list-row {
+      height: 80px;
+    }
+
+    .category {
+      height: 81px;
+    }
+
+    .transactions-date {
+      padding-left: 1.3em;
+      padding-right: 0.3em;
+      width: 3.1em;
+      font-size: 16px;
+    }
+
+    .beneficiary-image {
+      width: 5.4em;
+
+      img {
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+    .beneficiary-details {
+      width: 8em;
+
+      .beneficiary-name,
+      .transactions-type {
+        font-size: 16px;
+        width: 8em;
+      }
+    }
+
+    .transactions-amount {
+      font-size: 16px;
+      line-height: 80px;
+      margin-right: 0.8em;
+    }
+  }
+
+  @include media("screen", "<minWidth") {
+
+    .list-row {
+      height: 102px;
+    }
+
+    .category {
+      height: 105px;
+    }
+
+    .transactions-date {
+      padding-left: 0.8em;
+      padding-right: 0.3em;
+      width: 3.3em;
+      font-size: 23px;
+    }
+
+    .beneficiary-image {
+      width: 6.2em;
+
+      img {
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+    .beneficiary-details {
+      width: 12em;
+
+      .beneficiary-name,
+      .transactions-type {
+        width: 7em;
+        font-size: 23px;
+      }
+    }
+
+    .transactions-amount {
+      width: 6.3em;
+      line-height: 4.5;
+      margin-right: 0.5em;
+      float: none;
+      font-size: 23px;
+    }
+  }
+
+}

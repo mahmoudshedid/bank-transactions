@@ -1,0 +1,87 @@
+@import '../../styles/styles.scss';
+
+.recent-transactions {
+  // float: left;
+  margin: 16px 92px 20px 14px;
+  min-width: 822px;
+  background-color: $blockBackgroundColor;
+
+  -webkit-box-shadow: 0px 0px 11px 0px rgba(138, 138, 138, 1);
+  -moz-box-shadow: 0px 0px 11px 0px rgba(138, 138, 138, 1);
+  box-shadow: 0px 0px 11px 0px rgba(138, 138, 138, 1);
+
+  .transactions-header {
+    font-size: 20px;
+    height: 58px;
+    background-color: $topBarColor;
+    color: $textTopBarColor;
+    line-height: 2.9;
+
+    .transactions-header-logo {
+      width: 28px;
+      height: 24px;
+      background: url(../../assets/icons/briefcase.png) no-repeat top center;
+      float: left;
+      margin: 17px 20px;
+      filter: invert(1);
+      mix-blend-mode: color-dodge;
+    }
+
+    .transactions-header-title {
+      margin: 0 auto;
+      display: table;
+      padding-right: 35px;
+    }
+  }
+
+  .transactions-content {
+    padding: 20px;
+  }
+
+  @include media("screen", ">bp1Width", "<maxWidth") {
+
+    min-width: 425px;
+    margin: 20px 20px 20px 10px;
+  }
+
+  @include media("screen", ">minWidth", "<bp1Width") {
+
+    min-width: 425px;
+    margin: 10px;
+
+    .transactions-header {
+      height: 50px;
+      line-height: 2.2;
+
+      .transactions-header-logo {
+        margin: 13px 20px;
+      }
+
+      .transactions-header-title {
+        font-size: 22px;
+      }
+    }
+  }
+
+  @include media("screen", "<minWidth") {
+
+    display: table;
+    margin: 0 auto 20px;
+    min-width: 580px;
+    float: none;
+
+    .transactions-header {
+      height: 70px;
+
+      .transactions-header-logo {
+        margin: 23px 20px;
+      }
+
+      .transactions-header-title {
+        font-size: 35px;
+        line-height: 2;
+      }
+    }
+
+  }
+}

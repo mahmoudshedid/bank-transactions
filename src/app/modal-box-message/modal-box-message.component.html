@@ -1,0 +1,14 @@
+<!-- The Modal -->
+<div id="myModal" [style.display]="status" class="modal">
+
+  <!-- Modal content -->
+  <div [className]="'modal-content ' + type">
+    <span (click)="close()" class="modal-close">&times;</span>
+    <div class="modal-header">{{title}}</div>
+    <hr class="message-inner-separator">
+    <div class="modal-body">
+        <p>{{body}}</p>
+    </div>
+  </div>
+
+</div>

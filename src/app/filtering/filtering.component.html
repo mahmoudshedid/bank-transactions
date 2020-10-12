@@ -1,0 +1,29 @@
+<div class="filtering">
+  <div>
+    <div class="filtering-search">
+      <input type="text" class="form-control" #searchInput id="search" name="search" placeholder="Search by typing" (keyup)=(search($event))>
+      <button type="button" class="clear-search" (click)="clearSearch()" id="reset" (click)="clearSearch()">&times;</button>
+    </div>
+
+    <div class="filtering-sorting">
+      <label class="btn-group-label">Sort By</label>
+      <div class="btn-group">
+        <button (click)="sortBy('valueDate')">
+          <span class="label">DATE</span>
+          <i *ngIf="currentSortOrder === 'asc'  && currentSortOrderKey === 'valueDate'" class="fontello-icon">&#xe801;</i>
+          <i *ngIf="currentSortOrder === 'desc' && currentSortOrderKey === 'valueDate'" class="fontello-icon">&#xe800;</i>
+        </button>
+        <button (click)="sortBy('name')">
+          <span class="label">BENEFICIARY</span>
+          <i *ngIf="currentSortOrder === 'asc'  && currentSortOrderKey === 'name'" class="fontello-icon">&#xe801;</i>
+          <i *ngIf="currentSortOrder === 'desc' && currentSortOrderKey === 'name'" class="fontello-icon">&#xe800;</i>
+        </button>
+        <button (click)="sortBy('amount')">
+          <span class="label">AMOUNT</span>
+          <i *ngIf="currentSortOrder === 'asc'  && currentSortOrderKey === 'amount'" class="fontello-icon">&#xe801;</i>
+          <i *ngIf="currentSortOrder === 'desc' && currentSortOrderKey === 'amount'" class="fontello-icon">&#xe800;</i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

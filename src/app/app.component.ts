@@ -1,3 +1,4 @@
+import { Title } from '@angular/platform-browser';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'workatbackbase-transaction';
+
+  public constructor(private titleService: Title) {
+    this.titleService.setTitle('Peachtree Back');
+  }
 }

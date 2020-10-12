@@ -1,0 +1,37 @@
+@import '../../styles/styles';
+
+.header {
+  display: flex;
+  height: 84px;
+  background-color: $headerColor;
+  border-bottom: $hederSeparateTop solid 1px;
+
+  .logo {
+    width: 448px;
+    padding: 20px 103px;
+
+    img {
+      size: 50px;
+    }
+  }
+
+  @include media("screen", "<minWidth") {
+    height: 120px;
+
+    .logo {
+      padding: 0;
+      margin: 32px auto;
+    }
+  }
+
+}
+
+.separator {
+  margin: 0 0 50px 0;
+  border-top: $hederSeparateMeddle solid 1px;
+  border-bottom: $hederSeparateBottom solid 1px;
+
+  @include media("screen", "<minWidth") {
+    margin: 0 0 40px 0;
+  }
+}

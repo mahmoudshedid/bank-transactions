@@ -1,0 +1,179 @@
+@import '../../styles/styles';
+
+.filtering {
+  position: relative;
+  margin-bottom: 30px;
+
+  .filtering-search {
+    width: 23em;
+    margin-right: 30px;
+    float: left;
+
+    input {
+      width: 93%;
+    }
+
+    .clear-search {
+      background: #FFF;
+      color: #aaa;
+      width: 20px;
+      padding: 2px;
+      font-size: 20px;
+      font-weight: bold;
+      right: 15px;
+      top: 3px;
+    }
+
+    .clear-search:hover,
+    .clear-search:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+
+  .btn-group-label {
+    float: left;
+    margin-right: 10px;
+    line-height: 2.6;
+    font-size: 13px;
+    font-weight: bold;
+  }
+
+  .btn-group {
+    min-width: 473px;
+
+    button {
+      font-size: 15px;
+      background-color: #FFF;
+      border: 1px solid $borderColor;
+      border-radius: 0px;
+      color: $textColor;
+      padding: 7px;
+      width: 140px;
+      cursor: pointer;
+      float: left;
+
+      .icon-up {
+        width: 28px;
+        height: 24px;
+        background: url(../../assets/icons/icon-arrow.png) no-repeat center center / cover;
+        background-size: 20px 13px, cover;
+        float: left;
+      }
+
+      &:not(:last-child) {
+        border-right: none;
+      }
+
+      &:hover {
+        background-color: $borderColor;
+      }
+
+    }
+
+    &:after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+  }
+
+  @include media("screen", ">bp1Width", "<maxWidth") {
+
+    .filtering-search {
+      width: 13.6em;
+
+      input {
+        width: 88%;
+      }
+    }
+
+    .btn-group {
+      button:first-child {
+        width: 75px;
+      }
+
+      button:last-child {
+        width: 102px;
+      }
+    }
+  }
+
+  @include media("screen", ">minWidth", "<bp1Width") {
+
+    .btn-group-label {
+      float: none;
+      font-size: 16px;
+      font-weight: 80;
+    }
+
+    .btn-group {
+      min-width: 342px;
+      display: table;
+      margin: 0 auto;
+
+      button {
+        font-size: 15px;
+        padding: 8px;
+        width: 146px;
+      }
+
+
+
+      button:first-child {
+        width: 85px;
+      }
+
+      button:last-child {
+        width: 111px;
+      }
+    }
+
+    .filtering-search {
+      width: 100%;
+      display: table;
+      margin: 0 auto;
+      float: none;
+    }
+
+    .filtering-sorting {
+      display: table;
+      margin: 8px auto 0px;
+    }
+  }
+
+  @include media("screen", "<minWidth") {
+
+    .btn-group-label {
+      float: none;
+      font-size: 23px;
+      font-weight: 80;
+    }
+
+    .btn-group {
+      button {
+        font-size: 20px;
+        height: 90px;
+        padding: 8px;
+        width: 178px;
+      }
+    }
+
+    .filtering-search {
+      width: 100%;
+      display: table;
+      margin: 0 auto;
+      float: none;
+
+      .clear-search {
+        font-size: 26px;
+      }
+    }
+
+    .filtering-sorting {
+      display: table;
+      margin: 8px auto 0px;
+    }
+  }
+}

@@ -1,0 +1,221 @@
+@import '../../styles/styles.scss';
+
+.transfer {
+  float: left;
+  margin: 16px 14px 20px 103px;
+  min-width: 306px;
+  background-color: $blockBackgroundColor;
+
+  -webkit-box-shadow: 0px 0px 11px 0px rgba(138, 138, 138, 1);
+  -moz-box-shadow: 0px 0px 11px 0px rgba(138, 138, 138, 1);
+  box-shadow: 0px 0px 11px 0px rgba(138, 138, 138, 1);
+
+  .transfer-header {
+    font-size: 20px;
+    height: 40px;
+    background-color: $topBarColor;
+    color: $textTopBarColor;
+    line-height: 2;
+
+    .transfer-header-logo {
+      width: 28px;
+      height: 24px;
+      background: url(../../assets/icons/arrows.png) no-repeat top center;
+      float: left;
+      margin: 8px 20px;
+      filter: invert(1);
+      mix-blend-mode: color-dodge;
+    }
+
+    .transfer-header-title {
+      margin: 0 auto;
+      display: table;
+      padding-right: 50px;
+    }
+  }
+
+  .transfer-content {
+    padding: 18px;
+
+    .confirm {
+      position: absolute;
+      background-color: $blockBackgroundColor;
+      width: 17.1em;
+      height: 20.5em;
+      z-index: 1;
+
+      .confirm-label {
+        font-size: 18px;
+        color: $placeholderColor;
+      }
+
+      .confirm-details {
+        margin: 0 0 20px 10px;
+      }
+    }
+
+    input,
+    label {
+      display: block;
+    }
+
+    .form-group {
+      margin-bottom: 25px;
+      width: 100%;
+      // float: left;
+    }
+
+    .submit-button {
+      margin: 30px 0px;
+      float: right;
+      z-index: 1;
+
+      .confirm-submitting {
+        width: 130px;
+        z-index: 1;
+        float: left;
+        margin-left: 5px;
+
+        &.success {
+          background-color: #3c763d;
+        }
+      }
+    }
+  }
+
+  @include media("retina") {}
+
+  @include media("screen", ">bp1Width", "<maxWidth") {
+    margin: 20px 10px 20px 20px;
+
+    .transfer-content {
+
+      .confirm {
+        width: 17.3em;
+        height: 19.4em;
+        left: 35px;
+      }
+
+      .submit-button {
+        display: table;
+        margin: 20px auto;
+        float: none;
+      }
+    }
+  }
+
+  @include media("screen", ">minWidth", "<bp1Width") {
+
+    margin: 10px;
+    min-width: 268px;
+
+    .transfer-header {
+      height: 50px;
+      line-height: 2.2;
+
+      .transfer-header-logo {
+        margin: 13px 20px;
+      }
+
+      .transfer-header-title {
+        font-size: 22px;
+      }
+    }
+
+    .transfer-content {
+
+      .confirm {
+        width: 15em;
+        height: 20em;
+        left: 25px;
+      }
+
+      label {
+        font-size: 16px;
+      }
+
+      .submit-button {
+        display: table;
+        margin: 20px auto;
+        float: none;
+
+        .confirm-submitting {
+          width: 111px;
+        }
+
+        button {
+          padding: 16px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  @include media("screen", "<minWidth") {
+    min-width: 580px;
+    float: none;
+    display: table;
+    margin: 0 auto 40px;
+
+    .transfer-header {
+      height: 70px;
+      line-height: 2;
+
+      .transfer-header-logo {
+        margin: 23px 20px;
+      }
+
+      .transfer-header-title {
+        font-size: 35px;
+      }
+    }
+
+    .transfer-content {
+
+      .confirm {
+        width: 34.2em;
+        height: 30em;
+
+        .confirm-label {
+          font-size: 30px;
+          color: $placeholderColor;
+        }
+  
+        .confirm-details {
+          margin: 0 0 20px 10px;
+          font-size: 27px;
+        }
+
+        .confirm-note {
+          font-size: 25px;
+        }
+      }
+
+      label {
+        font-size: 30px;
+      }
+
+      .submit-button {
+        display: table;
+        margin: 20px auto;
+        float: none;
+
+        .confirm-submitting {
+          width: 215px;
+        }
+
+        button {
+          padding: 25px;
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}
+
+@include media("screen", "<minWidth") {
+  .error {
+    width: 100%;
+    font-size: 25px;
+  }
+}

@@ -28,8 +28,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles/styles.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/styles"
+              ]
+            },
             "scripts": []
           },
           "configurations": {
@@ -123,6 +128,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "workatbackbase-transaction"
+    }
+  },
+  "defaultProject": "workatbackbase-transaction",
+  "cli": {
+    "analytics": "3ddfdcf2-09b5-48dc-8300-5f29eca9c10e"
+  }
 }

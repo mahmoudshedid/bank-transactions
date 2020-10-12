@@ -1,0 +1,60 @@
+<div class="transfer">
+  <div class="transfer-header">
+    <span class="transfer-header-logo"></span>
+    <span class="transfer-header-title">Make a transfer</span>
+  </div>
+  <div class="transfer-content">
+    <div class="confirm" [style.display]="confirmVisible">
+      <div class="confirm-label">You will transfer to:</div>
+      <div class="confirm-details">{{confirmToAccount}}</div>
+      <div class="confirm-label">The Amount:</div>
+      <div class="confirm-details">€{{confirmAmount | number:'1.2'}}</div>
+      <div class="confirm-note">Please note: If you confirm this transaction, you will not be able to undo.</div>
+    </div>
+    <form [formGroup]="transferForm" (ngSubmit)="onSubmit()" (keydown.enter)="$event.preventDefault()"
+      (keydown.shift.enter)="$event.preventDefault()" (keydown.control.enter)="$event.preventDefault()"
+      (keydown.alt.enter)="$event.preventDefault()">
+      <div class="form-group">
+        <label for="from-account">FROM ACCOUNT</label>
+        <input type="text" class="form-control" id="from-account" name="from-account" formControlName="fromAccount">
+      </div>
+
+      <div class="form-group">
+        <label for="to-account">TO ACCOUNT</label>
+        <input type="text" class="form-control" id="to-account" name="to-account" formControlName="toAccount">
+        <div
+          *ngIf="transferForm.controls['toAccount'].invalid && (transferForm.controls['toAccount'].dirty || transferForm.controls['toAccount'].touched)"
+          class="alert-danger">
+          <div *ngFor="let validation of accountValidationMessages.toAccount">
+            <div class="error" *ngIf="transferForm.get('toAccount').hasError(validation.type)">
+              {{validation.message}}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="amount">AMOUNT</label>
+        <input type="text" class="form-control" id="amount" name="amount" formControlName="amount">
+        <div
+          *ngIf="transferForm.controls['amount'].invalid && (transferForm.controls['amount'].dirty || transferForm.controls['amount'].touched)"
+          class="alert-danger">
+          <div *ngFor="let validation of accountValidationMessages.amount">
+            <div class="error" *ngIf="transferForm.get('amount').hasError(validation.type)">
+              {{validation.message}}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="submit-button">
+        <button type="button" (click)="cancel()" class="confirm-submitting"
+          [style.display]="confirmVisible">Cancel</button>
+        <button type="submit" [disabled]="transferForm.pristine || transferForm.invalid"
+          class="confirm-submitting success" [style.display]="confirmVisible">Confirm</button>
+        <button type="button" [disabled]="transferForm.pristine || transferForm.invalid" (click)="startTransfer()"
+          [style.display]="submitButton">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>

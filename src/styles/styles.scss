@@ -1,0 +1,142 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css?family=Kanit');
+
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+@font-face {
+  font-family: 'fontello';
+  src: url('../assets/font/fontello.eot?10954591');
+  src: url('../assets/font/fontello.eot?10954591#iefix') format('embedded-opentype'),
+    url('../assets/font/fontello.woff2?10954591') format('woff2'),
+    url('../assets/font/fontello.woff?10954591') format('woff'),
+    url('../assets/font/fontello.ttf?10954591') format('truetype'),
+    url('../assets/font/fontello.svg?10954591#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+html {
+  min-width: fit-content;
+  height: 100%;
+}
+
+body {
+  background: url('../assets/images/background.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: 'Kanit', 'sans-serif';
+}
+
+input {
+  font-family: 'Kanit', 'sans-serif';
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: $borderColor;
+  font-size: 15px;
+  width: 100%;
+  padding-bottom: 7px;
+  color: $placeholderColor;
+
+  @include media("screen", ">minWidth", "<bp1Width") {
+    font-size: 16px;
+  }
+
+  @include media("screen", "<minWidth") {
+    font-size: 30px;
+  }
+}
+
+input:focus {
+  border-color: $borderFocusColor
+}
+
+button {
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 17px;
+  position: relative;
+  background-color: $buttonColor;
+  border: none;
+  color: #fff;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  transition-duration: 0.4s;
+  overflow: hidden;
+  border-radius: 4px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:after {
+    content: "";
+    background: rgb(255, 255, 255, 0.5);
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+  }
+
+  &:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+  }
+}
+
+.fontello-icon {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: never;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: .2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.error {
+  width: 17em;
+  color: $errorColor;
+  font-size: 15px;
+}
+
+
+button:disabled {
+  opacity: 0.6;
+}

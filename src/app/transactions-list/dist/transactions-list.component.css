@@ -1,0 +1,281 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css?family=Kanit");
+@font-face {
+  font-family: "fontello";
+  src: url("../assets/font/fontello.eot?10954591");
+  src: url("../assets/font/fontello.eot?10954591#iefix") format("embedded-opentype"), url("../assets/font/fontello.woff2?10954591") format("woff2"), url("../assets/font/fontello.woff?10954591") format("woff"), url("../assets/font/fontello.ttf?10954591") format("truetype"), url("../assets/font/fontello.svg?10954591#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+html {
+  min-width: fit-content;
+  height: 100%;
+}
+
+body {
+  background: url("../assets/images/background.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: "Kanit", "sans-serif";
+}
+
+input {
+  font-family: "Kanit", "sans-serif";
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: #d6d2ce;
+  font-size: 15px;
+  width: 100%;
+  padding-bottom: 7px;
+  color: #7b7772;
+}
+@media only screen and (min-width: 481px) and (max-width: 960px) {
+  input {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  input {
+    font-size: 30px;
+  }
+}
+
+input:focus {
+  border-color: green;
+}
+
+button {
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 17px;
+  position: relative;
+  background-color: #ee7033;
+  border: none;
+  color: #fff;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  transition-duration: 0.4s;
+  overflow: hidden;
+  border-radius: 4px;
+}
+button:focus {
+  outline: none;
+}
+button:after {
+  content: "";
+  background: rgba(255, 255, 255, 0.5);
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s;
+}
+button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
+}
+
+.fontello-icon {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: never;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: 0.2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.error {
+  width: 17em;
+  color: red;
+  font-size: 15px;
+}
+
+button:disabled {
+  opacity: 0.6;
+}
+
+.transactions-list div {
+  vertical-align: middle;
+}
+.transactions-list .list-row {
+  border: 2px solid #d6d2ce;
+  border-left: none;
+  border-bottom: none;
+  display: table;
+  width: 100%;
+  line-height: 0.8;
+  height: 67px;
+}
+.transactions-list .list-row:last-child {
+  border-bottom: 2px solid #d6d2ce;
+}
+.transactions-list .column {
+  display: table-cell;
+}
+.transactions-list .category {
+  background-color: #a00c0c;
+  width: 10px;
+  position: absolute;
+  height: 67px;
+}
+.transactions-list .transactions-date {
+  padding-left: 1.5em;
+  width: 5.5em;
+}
+.transactions-list .beneficiary-image {
+  width: 5.4em;
+}
+.transactions-list .beneficiary-image img {
+  margin: 3px;
+  width: 50px;
+  height: 50px;
+  filter: grayscale(1);
+}
+.transactions-list .beneficiary-details {
+  width: 25em;
+}
+.transactions-list .beneficiary-details span {
+  width: 25em;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+}
+.transactions-list .beneficiary-details .beneficiary-name {
+  line-height: 1.2;
+  font-size: 18px;
+}
+.transactions-list .beneficiary-details .transactions-type {
+  line-height: 1;
+  font-size: 15px;
+}
+.transactions-list .transactions-amount {
+  text-align: right;
+  width: 7em;
+  float: right;
+  line-height: 67px;
+  margin-right: 2.5em;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+}
+@media only screen and (min-width: 961px) and (max-width: 1260px) {
+  .transactions-list {
+    min-width: 609px;
+  }
+  .transactions-list .beneficiary-details {
+    width: 17em;
+  }
+  .transactions-list .beneficiary-details .beneficiary-name,
+.transactions-list .beneficiary-details .transactions-type {
+    width: 17em;
+  }
+  .transactions-list .transactions-amount {
+    margin-right: 0.8em;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 960px) {
+  .transactions-list .list-row {
+    height: 80px;
+  }
+  .transactions-list .category {
+    height: 81px;
+  }
+  .transactions-list .transactions-date {
+    padding-left: 1.3em;
+    padding-right: 0.3em;
+    width: 3.1em;
+    font-size: 16px;
+  }
+  .transactions-list .beneficiary-image {
+    width: 5.4em;
+  }
+  .transactions-list .beneficiary-image img {
+    width: 60px;
+    height: 60px;
+  }
+  .transactions-list .beneficiary-details {
+    width: 8em;
+  }
+  .transactions-list .beneficiary-details .beneficiary-name,
+.transactions-list .beneficiary-details .transactions-type {
+    font-size: 16px;
+    width: 8em;
+  }
+  .transactions-list .transactions-amount {
+    font-size: 16px;
+    line-height: 80px;
+    margin-right: 0.8em;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .transactions-list .list-row {
+    height: 102px;
+  }
+  .transactions-list .category {
+    height: 105px;
+  }
+  .transactions-list .transactions-date {
+    padding-left: 0.8em;
+    padding-right: 0.3em;
+    width: 3.3em;
+    font-size: 23px;
+  }
+  .transactions-list .beneficiary-image {
+    width: 6.2em;
+  }
+  .transactions-list .beneficiary-image img {
+    width: 80px;
+    height: 80px;
+  }
+  .transactions-list .beneficiary-details {
+    width: 12em;
+  }
+  .transactions-list .beneficiary-details .beneficiary-name,
+.transactions-list .beneficiary-details .transactions-type {
+    width: 7em;
+    font-size: 23px;
+  }
+  .transactions-list .transactions-amount {
+    width: 6.3em;
+    line-height: 4.5;
+    margin-right: 0.5em;
+    float: none;
+    font-size: 23px;
+  }
+}

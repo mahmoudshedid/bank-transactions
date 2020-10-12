@@ -1,0 +1,129 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css?family=Kanit");
+@font-face {
+  font-family: "fontello";
+  src: url("../assets/font/fontello.eot?10954591");
+  src: url("../assets/font/fontello.eot?10954591#iefix") format("embedded-opentype"), url("../assets/font/fontello.woff2?10954591") format("woff2"), url("../assets/font/fontello.woff?10954591") format("woff"), url("../assets/font/fontello.ttf?10954591") format("truetype"), url("../assets/font/fontello.svg?10954591#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+html {
+  min-width: fit-content;
+  height: 100%;
+}
+
+body {
+  background: url("../assets/images/background.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: "Kanit", "sans-serif";
+}
+
+input {
+  font-family: "Kanit", "sans-serif";
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: #d6d2ce;
+  font-size: 15px;
+  width: 100%;
+  padding-bottom: 7px;
+  color: #7b7772;
+}
+@media only screen and (min-width: 481px) and (max-width: 960px) {
+  input {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  input {
+    font-size: 30px;
+  }
+}
+
+input:focus {
+  border-color: green;
+}
+
+button {
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 17px;
+  position: relative;
+  background-color: #ee7033;
+  border: none;
+  color: #fff;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  transition-duration: 0.4s;
+  overflow: hidden;
+  border-radius: 4px;
+}
+button:focus {
+  outline: none;
+}
+button:after {
+  content: "";
+  background: rgba(255, 255, 255, 0.5);
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s;
+}
+button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
+}
+
+.fontello-icon {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: never;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: 0.2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.error {
+  width: 17em;
+  color: red;
+  font-size: 15px;
+}
+
+button:disabled {
+  opacity: 0.6;
+}

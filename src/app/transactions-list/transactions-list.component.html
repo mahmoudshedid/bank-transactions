@@ -1,0 +1,19 @@
+<div>
+  <app-filtering *ngIf="transactionList" [(data)]="transactionList" (dataFiltered)="onTransactionListFiltered($event)"></app-filtering>
+</div>
+<div class="transactions-list">
+  <div class="list-row" *ngFor="let transaction of transactionList">
+    <div class="column category" [style.background]="transaction.categoryCode"></div>
+    <div class="column transactions-date">{{transaction.dates.valueDate | date: 'MMM. d'}}</div>
+    <div class="column beneficiary-image"><img src={{transaction.merchant.img}} alt="{{transaction.merchant.name}}">
+    </div>
+    <div class="column beneficiary-details">
+      <span class="beneficiary-name">{{transaction.merchant.name}}</span>
+      <span class="transactions-type">{{transaction.transaction.creditDebitIndicator}}
+        {{transaction.transaction.type}}</span>
+    </div>
+    <div class="column transactions-amount">
+      -{{transaction.transaction.amountCurrency.currencyCode | currencyCode}}{{transaction.transaction.amountCurrency.amount | number:'1.2'}}
+    </div>
+  </div>
+</div>

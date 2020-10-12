@@ -1,0 +1,14 @@
+@import '../styles/styles';
+
+.main-container {
+  display: flex;
+
+  .recent-transactions {
+    width: 100%;
+  }
+
+  @include media("screen", "<minWidth") {
+    margin: 0 20px;
+    display: table;
+  }
+}
