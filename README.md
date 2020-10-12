@@ -25,38 +25,38 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 ## Application Structure
 
 src--<br />
-<space><space><space><space>|<br />
-<space><space><space><space>|<br />
-<space><space><space><space>common--<br />
-<space><space><space><space>|<space><space>|<br />
-<space><space><space><space>|&nbsp;error  `Handle errors`.<br />
-<space><space><space><space>|<br />
-<space><space><space><space>|<br />
-<space><space><space><space>filtering `Filter for 'Recent Transactions'`.<br />
-<space><space><space><space>|<br />
-<space><space><space><space>|<br />
-<space><space><space><space>header `Page Header`.<br />
-<space><space><space><space>|<br />
-<space><space><space><space>|<br />
-<space><space><space><space>modal-box-message `Popup window alert message`.<br />
-<space><space><space><space>|<br />
-<space><space><space><space>|<br />
-<space><space><space><space>models `For all object and serialization`.<br />
-<space><space><space><space>|<br />
-<space><space><space><space>|
-<space><space><space><space>pips--<br />
-<space><space><space><space>|<space><space>|<br />
-<space><space><space><space>|&nbsp;currency-code.pipe.js `This pip for chose currency code for 'Recent Transactions'`.<br />
-<space><space><space><space>|<br />
-<space><space><space><space>|<br />
-<space><space><space><space>|<br />
-<space><space><space><space>recent-transactions `Has Filter and Recent Transactions components`.<br />
-<space><space><space><space>|<br />
-<space><space><space><space>|
-<space><space><space><space>services `Has all application services`.<br />
-<space><space><space><space>|<br />
-<space><space><space><space>|<br />
-<space><space><space><space>transactions-list `List all 'Recent Transactions' and get new transfer from 'Make a transfer'`.<br />
-<space><space><space><space>|<br />
-<space><space><space><space>|<br />
-<space><space><space><space>transfer `'Make a transfer' component to make new transfer and send to 'Recent Transactions'`.<br />
+>>>>|<br />
+>>>>|<br />
+>>>>common--<br />
+>>>>|>>|<br />
+>>>>|&nbsp;error  `Handle errors`.<br />
+>>>>|<br />
+>>>>|<br />
+>>>>filtering `Filter for 'Recent Transactions'`.<br />
+>>>>|<br />
+>>>>|<br />
+>>>>header `Page Header`.<br />
+>>>>|<br />
+>>>>|<br />
+>>>>modal-box-message `Popup window alert message`.<br />
+>>>>|<br />
+>>>>|<br />
+>>>>models `For all object and serialization`.<br />
+>>>>|<br />
+>>>>|
+>>>>pips--<br />
+>>>>|>>|<br />
+>>>>|&nbsp;currency-code.pipe.js `This pip for chose currency code for 'Recent Transactions'`.<br />
+>>>>|<br />
+>>>>|<br />
+>>>>|<br />
+>>>>recent-transactions `Has Filter and Recent Transactions components`.<br />
+>>>>|<br />
+>>>>|
+>>>>services `Has all application services`.<br />
+>>>>|<br />
+>>>>|<br />
+>>>>transactions-list `List all 'Recent Transactions' and get new transfer from 'Make a transfer'`.<br />
+>>>>|<br />
+>>>>|<br />
+>>>>transfer `'Make a transfer' component to make new transfer and send to 'Recent Transactions'`.<br />
