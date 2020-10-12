@@ -24,39 +24,39 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## Application Structure
 
-src--__
-    |__
-    |__
-    common--__
-    |      |__
-    |      error  `Handle errors`.__
-    |__
-    |__
-    filtering `Filter for 'Recent Transactions'`.__
-    |__
-    |__
-    header `Page Header`.__
-    |__
-    |__
-    modal-box-message `Popup window alert message`.__
-    |__
-    |__
-    models `For all object and serialization`.__
-    |__
+src--<br />
+    |<br />
+    |<br />
+    common--<br />
+    |      |<br />
+    |      error  `Handle errors`.<br />
+    |<br />
+    |<br />
+    filtering `Filter for 'Recent Transactions'`.<br />
+    |<br />
+    |<br />
+    header `Page Header`.<br />
+    |<br />
+    |<br />
+    modal-box-message `Popup window alert message`.<br />
+    |<br />
+    |<br />
+    models `For all object and serialization`.<br />
+    |<br />
     |
-    pips--__
-    |     |__
-    |     currency-code.pipe.js `This pip for chose currency code for 'Recent Transactions'`.__
-    |__
-    |__
-    |__
-    recent-transactions `Has Filter and Recent Transactions components`.__
-    |__
+    pips--<br />
+    |     |<br />
+    |     currency-code.pipe.js `This pip for chose currency code for 'Recent Transactions'`.<br />
+    |<br />
+    |<br />
+    |<br />
+    recent-transactions `Has Filter and Recent Transactions components`.<br />
+    |<br />
     |
-    services `Has all application services`.__
-    |__
-    |__
-    transactions-list `List all 'Recent Transactions' and get new transfer from 'Make a transfer'`.__
-    |__
-    |__
-    transfer `'Make a transfer' component to make new transfer and send to 'Recent Transactions'`.__
+    services `Has all application services`.<br />
+    |<br />
+    |<br />
+    transactions-list `List all 'Recent Transactions' and get new transfer from 'Make a transfer'`.<br />
+    |<br />
+    |<br />
+    transfer `'Make a transfer' component to make new transfer and send to 'Recent Transactions'`.<br />
