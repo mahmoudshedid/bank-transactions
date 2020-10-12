@@ -2,7 +2,7 @@
 
 ## Description
 
-This project is a single page application to help users for transferring money and showing the past transactions in a historical transactions list.
+This project is a single page application to help users in transferring money and showing the past transactions within historical transactions list.
 
 ## Initialize the application
 
@@ -46,17 +46,17 @@ src__<br />
 >>|
 >>pips__<br />
 >>|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<br />
->>|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|currency-code.pipe.js `This pip for chose currency code for 'Recent Transactions'`.<br />
+>>|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|currency-code.pipe.js `This pip for choose currency code for 'Recent Transactions'`.<br />
 >>|<br />
 >>|<br />
 >>|<br />
->>recent-transactions `Has Filter and Recent Transactions components`.<br />
+>>recent-transactions `Has 'Filter' and 'Recent Transactions' components`.<br />
 >>|<br />
 >>|
 >>services `Has all application services`.<br />
 >>|<br />
 >>|<br />
->>transactions-list `List all 'Recent Transactions' and get new transfer from 'Make a transfer'`.<br />
+>>transactions-list `List all 'Recent Transactions' and get new transfer from 'Make a transfer' by`.<br />
 >>|<br />
 >>|<br />
 >>transfer `'Make a transfer' component to make new transfer and send to 'Recent Transactions'`.<br />
