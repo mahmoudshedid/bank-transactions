@@ -28,8 +28,8 @@ src--<br />
 >>|<br />
 >>|<br />
 >>common--<br />
->>|     + |<br />
->>|     + error  `Handle errors`.<br />
+>>|     : - |<br />
+>>|     : - error  `Handle errors`.<br />
 >>|<br />
 >>|<br />
 >>filtering `Filter for 'Recent Transactions'`.<br />
@@ -45,8 +45,8 @@ src--<br />
 >>|<br />
 >>|
 >>pips--<br />
->>|   + |<br />
->>|   + currency-code.pipe.js `This pip for chose currency code for 'Recent Transactions'`.<br />
+>>|   : - |<br />
+>>|   : - currency-code.pipe.js `This pip for chose currency code for 'Recent Transactions'`.<br />
 >>|<br />
 >>|<br />
 >>|<br />
