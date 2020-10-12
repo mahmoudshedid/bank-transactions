@@ -24,12 +24,12 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## Application Structure
 
-src--<br />
+src__<br />
 >>|<br />
 >>|<br />
->>common--<br />
->>|     : - |<br />
->>|     : - error  `Handle errors`.<br />
+>>common__<br />
+>>|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<br />
+>>|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|error  `Handle errors`.<br />
 >>|<br />
 >>|<br />
 >>filtering `Filter for 'Recent Transactions'`.<br />
@@ -44,9 +44,9 @@ src--<br />
 >>models `For all object and serialization`.<br />
 >>|<br />
 >>|
->>pips--<br />
->>|   : - |<br />
->>|   : - currency-code.pipe.js `This pip for chose currency code for 'Recent Transactions'`.<br />
+>>pips__<br />
+>>|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<br />
+>>|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|currency-code.pipe.js `This pip for chose currency code for 'Recent Transactions'`.<br />
 >>|<br />
 >>|<br />
 >>|<br />
